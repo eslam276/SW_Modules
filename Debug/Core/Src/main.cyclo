@@ -3,5 +3,4 @@
 ../Core/Src/main.c:166:13:MX_CAN1_Init	2
 ../Core/Src/main.c:203:13:MX_USART2_UART_Init	2
 ../Core/Src/main.c:236:13:MX_GPIO_Init	1
-../Core/Src/main.c:269:1:CAN1_TX	3
-../Core/Src/main.c:298:6:Error_Handler	1
+../Core/Src/main.c:276:6:Error_Handler	1

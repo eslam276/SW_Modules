@@ -23,6 +23,7 @@
 /* USER CODE BEGIN Includes */
 #include <stdio.h>
 #include <string.h>
+#include "CAN_interface.h"
 
 /* USER CODE END Includes */
 
@@ -42,7 +43,7 @@
 /* USER CODE END PM */
 
 /* Private variables ---------------------------------------------------------*/
-CAN_HandleTypeDef hcan1;
+extern CAN_HandleTypeDef hcan1;
 
 UART_HandleTypeDef huart2;
 
@@ -56,7 +57,6 @@ static void MX_GPIO_Init(void);
 static void MX_USART2_UART_Init(void);
 static void MX_CAN1_Init(void);
 /* USER CODE BEGIN PFP */
-CAN1_TX(void);
 /* USER CODE END PFP */
 
 /* Private user code ---------------------------------------------------------*/
@@ -266,29 +266,7 @@ static void MX_GPIO_Init(void)
 }
 
 /* USER CODE BEGIN 4 */
-CAN1_TX(void)
-{
-	CAN_TxHeaderTypeDef CAN_TX_Data ;
 
-	char Local_message[] = {'h','e','l' , 'l' , 'o'};
-	char Local_TranmitMSG [50];
-	uint32_t Local_u32MailBox ;
-	CAN_TX_Data.StdId = 0x65D;
-	CAN_TX_Data.IDE = CAN_ID_STD ;
-	CAN_TX_Data.RTR = CAN_RTR_DATA ;
-	CAN_TX_Data.DLC = 5 ;
-
-	if ( HAL_CAN_AddTxMessage(&hcan1 , &CAN_TX_Data ,(uint8_t*) Local_message ,&Local_u32MailBox ) != HAL_OK )
-	{
-		Error_Handler();
-	}
-
-	/* Wait as long as the message is pending */
-	while(HAL_CAN_IsTxMessagePending(&hcan1, Local_u32MailBox) == 1);
-	sprintf(Local_TranmitMSG , "Message transmitted\r\n");
-	HAL_UART_Transmit(&huart2, Local_TranmitMSG, strlen(Local_TranmitMSG), HAL_MAX_DELAY);
-
-}
 /* USER CODE END 4 */
 
 /**

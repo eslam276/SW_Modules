@@ -95,9 +95,11 @@ int main(void)
   MX_USART2_UART_Init();
   MX_CAN1_Init();
   /* USER CODE BEGIN 2 */
+  CAN_FilterConfig();
   /*go to normal mode */
   HAL_CAN_Start(&hcan1);
   CAN1_TX();
+  CAN1_RX();
   /* USER CODE END 2 */
 
   /* Infinite loop */

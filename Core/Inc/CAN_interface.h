@@ -4,7 +4,9 @@
 
 
 void CAN1_TX(void);
+void CAN1_RX(void);
 
+void CAN_FilterConfig(void);
 
 
 

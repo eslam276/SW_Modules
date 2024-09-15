@@ -1,1 +1,3 @@
-../Core/Src/CAN_interface.c:7:6:CAN1_TX	40	static
+../Core/Src/CAN_interface.c:10:6:CAN1_TX	40	static
+../Core/Src/CAN_interface.c:36:6:CAN1_RX	104	static
+../Core/Src/CAN_interface.c:56:6:CAN_FilterConfig	48	static

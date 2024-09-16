@@ -1,0 +1,9 @@
+../Core/Src/CAN_interface.c:10:6:CAN1_Init	2
+../Core/Src/CAN_interface.c:19:6:CAN1_TX	2
+../Core/Src/CAN_interface.c:45:6:CAN1_RX	3
+../Core/Src/CAN_interface.c:65:6:CAN_FilterConfig	2
+../Core/Src/CAN_interface.c:96:6:HAL_CAN_TxMailbox0CompleteCallback	1
+../Core/Src/CAN_interface.c:104:6:HAL_CAN_TxMailbox1CompleteCallback	1
+../Core/Src/CAN_interface.c:109:6:HAL_CAN_TxMailbox2CompleteCallback	1
+../Core/Src/CAN_interface.c:115:6:HAL_CAN_RxFifo0MsgPendingCallback	2
+../Core/Src/CAN_interface.c:134:1:HAL_CAN_RxFifo1MsgPendingCallback	1
